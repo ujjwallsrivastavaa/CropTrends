@@ -142,6 +142,8 @@ def crop_profile(name):
     #print(prev_crop_values)
     #print(str(forecast_x))
     crop_data = crops.crop(name)
+
+
     context = {
         "name":name,
         "max_crop": max_crop,
@@ -157,6 +159,7 @@ def crop_profile(name):
         "prime_loc":crop_data[1],
         "type_c":crop_data[2],
         "export":crop_data[3]
+
     }
     return render_template('commodity.html', context=context)
 

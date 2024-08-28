@@ -21,18 +21,19 @@
 
 <body class="main">
     <div>
-        <div class="nav-wrapper">
-            <h3 class="bg-amber-300 text-center flex items-center justify-center p-4">
-                <a class="brand-logo text-black" href="#">
-                    <img alt="AgriShield Logo" src="/static/agrishieldlogo.png" class="h-24 w-24 inline" />
-                    <span>AgriShield</span>
-                </a>
-            </h3>
-        </div>
+        <div class="nav-wrapper flex items-center justify-between p-4 bg-amber-300">
+    <a class="brand-logo flex items-center" href="#">
+        <img alt="AgriShield Logo" src="/static/agrishieldlogo.png" class="h-24 w-24 inline" />
+    </a>
+    <h3 class="text-black text-center flex-grow text-4xl font-bold">
+        <span>EXPLORE MARKET TRENDS</span>
+    </h3>
+</div>
+
 
         <div class="row flex">
-            <div class="bg-gray-100 p-4 w-3/4">
-                <h4 class="bg-cyan-100 p-2">Top Gainers (Current trends)</h4>
+            <div class="bg-white-100 p-4 w-3/4">
+                <h4 class="bg-green-600 p-2 text-white inline rounded-lg" >Top Gainers (Current trends)</h4>
                 <table class="table-auto w-full text-left mt-4">
                     <thead>
                         <tr>
@@ -53,8 +54,8 @@
                     </tbody>
                 </table>
 
-                <div class="bg-gray-100 p-4 mt-4">
-                    <h4 class="bg-cyan-100 p-2">Top Losers (Current trends)</h4>
+                <div class="bg-white-100 p-4 mt-4">
+                    <h4 class="bg-red-600 p-2 text-white inline rounded-lg">Top Losers (Current trends)</h4>
                     <table class="table-auto w-full text-left mt-4">
                         <thead>
                             <tr>
@@ -77,11 +78,11 @@
                 </div>
             </div>
 
-            <div class="w-1/4">
-                <div class="bg-gray-200 p-4">
+            <div class="w-1/4 ">
+                <div class="bg-white-200 p-4">
                     <div class="text-black">
-                        <h6>Star Commodity Prediction</h6>
-                        <span class="text-lg font-bold" id="time">{{context.sixmonths[0][0]}}</span>
+                        <h6 class="bg-yellow-500 p-2 text-white inline rounded-lg">Star Commodity Prediction</h6>
+                        <span class="text-lg font-bold m-4" id="time">{{context.sixmonths[0][0]}}</span>
                        <table class="mt-4 w-full">
   <tr>
     <td>
@@ -196,12 +197,12 @@
                 </div>
             </div>
         </div>
-
-       <h5 class="text-lg font-semibold mb-4">Explore by commodity</h5>
-
+<div class="bg-white-100 p-4 mt-4">
+       <h5 class="bg-black p-2 text-white inline rounded-lg">Explore by commodity</h5>
+    </div>
 <div class="grid grid-cols-4 gap-4">
   <a href="http://localhost:5000/commodity/Paddy" class="text-black">
-    <div class="bg-gray-100 p-4 rounded-md shadow-md hover:shadow-lg">
+    <div class="bg-white-100 p-4 rounded-md shadow-md hover:shadow-lg">
       <div class="flex items-center">
         <img src="https://img.icons8.com/color/48/000000/rice-bowl.png" class="w-12 h-12" />
         <span class="ml-4 font-semibold">Paddy</span>
@@ -210,7 +211,7 @@
   </a>
 
   <a href="http://localhost:5000/commodity/Wheat" class="text-black">
-    <div class="bg-gray-100 p-4 rounded-md shadow-md hover:shadow-lg">
+    <div class="bg-white-100 p-4 rounded-md shadow-md hover:shadow-lg">
       <div class="flex items-center">
         <img src="https://img.icons8.com/color/48/000000/wheat.png" class="w-12 h-12" />
         <span class="ml-4 font-semibold">Wheat</span>
@@ -219,7 +220,7 @@
   </a>
 
   <a href="http://localhost:5000/commodity/Barley" class="text-black">
-    <div class="bg-gray-100 p-4 rounded-md shadow-md hover:shadow-lg">
+    <div class="bg-white-100 p-4 rounded-md shadow-md hover:shadow-lg">
       <div class="flex items-center">
         <img src="https://img.icons8.com/color/48/000000/barley.png" class="w-12 h-12" />
         <span class="ml-4 font-semibold">Barley</span>
@@ -228,7 +229,7 @@
   </a>
 
   <a href="http://localhost:5000/commodity/Soyabean" class="text-black">
-    <div class="bg-gray-100 p-4 rounded-md shadow-md hover:shadow-lg">
+    <div class="bg-white-100 p-4 rounded-md shadow-md hover:shadow-lg">
       <div class="flex items-center">
         <img src="https://img.icons8.com/color/48/000000/soy.png" class="w-12 h-12" />
         <span class="ml-4 font-semibold">Soya Bean</span>
@@ -238,8 +239,8 @@
 </div>
 
 <div class="grid grid-cols-4 gap-4 mt-4">
-  <a href="http://localhost:5000/commodity/Cotton/" class="text-black">
-    <div class="bg-gray-100 p-4 rounded-md shadow-md hover:shadow-lg">
+  <a href="http://localhost:5000/commodity/Cotton" class="text-black">
+    <div class="bg-white-100 p-4 rounded-md shadow-md hover:shadow-lg">
       <div class="flex items-center">
         <img src="https://img.icons8.com/color/48/000000/cotton.png" class="w-12 h-12" />
         <span class="ml-4 font-semibold">Cotton</span>
@@ -248,7 +249,7 @@
   </a>
 
   <a href="http://localhost:5000/commodity/Copra" class="text-black">
-    <div class="bg-gray-100 p-4 rounded-md shadow-md hover:shadow-lg">
+    <div class="bg-white-100 p-4 rounded-md shadow-md hover:shadow-lg">
       <div class="flex items-center">
         <img src="https://img.icons8.com/color/48/000000/coconut.png" class="w-12 h-12" />
         <span class="ml-4 font-semibold">Coconut</span>
@@ -257,7 +258,7 @@
   </a>
 
   <a href="http://localhost:5000/commodity/Groundnut" class="text-black">
-    <div class="bg-gray-100 p-4 rounded-md shadow-md hover:shadow-lg">
+    <div class="bg-white-100 p-4 rounded-md shadow-md hover:shadow-lg">
       <div class="flex items-center">
         <img src="https://img.icons8.com/color/48/000000/peanuts.png" class="w-12 h-12" />
         <span class="ml-4 font-semibold">Ground Nut Seeds</span>
@@ -266,7 +267,7 @@
   </a>
 
   <a href="http://localhost:5000/commodity/Rape" class="text-black">
-    <div class="bg-gray-100 p-4 rounded-md shadow-md hover:shadow-lg">
+    <div class="bg-white-100 p-4 rounded-md shadow-md hover:shadow-lg">
       <div class="flex items-center">
         <img src="https://cdn.shopify.com/s/files/1/0273/1241/products/MustardSeeds.png?v=1652110540" class="w-12 h-12" />
         <span class="ml-4 font-semibold">Mustard Seed</span>
@@ -277,7 +278,7 @@
 
 <div class="grid grid-cols-4 gap-4 mt-4">
   <a href="http://localhost:5000/commodity/Sesamum" class="text-black">
-    <div class="bg-gray-100 p-4 rounded-md shadow-md hover:shadow-lg">
+    <div class="bg-white-100 p-4 rounded-md shadow-md hover:shadow-lg">
       <div class="flex items-center">
         <img src="https://img.icons8.com/color/48/000000/sesame.png" class="w-12 h-12" />
         <span class="ml-4 font-semibold">Gingelly Seed (Sesamum)</span>
@@ -286,7 +287,7 @@
   </a>
 
   <a href="http://localhost:5000/commodity/Gram" class="text-black">
-    <div class="bg-gray-100 p-4 rounded-md shadow-md hover:shadow-lg">
+    <div class="bg-white-100 p-4 rounded-md shadow-md hover:shadow-lg">
       <div class="flex items-center">
         <img src="https://img.icons8.com/color/48/000000/paper-bag-with-seeds.png" class="w-12 h-12" />
         <span class="ml-4 font-semibold">Gram</span>
@@ -295,7 +296,7 @@
   </a>
 
   <a href="http://localhost:5000/commodity/Sugarcane" class="text-black">
-    <div class="bg-gray-100 p-4 rounded-md shadow-md hover:shadow-lg">
+    <div class="bg-white-100 p-4 rounded-md shadow-md hover:shadow-lg">
       <div class="flex items-center">
         <img src="https://img.icons8.com/color/48/000000/bamboo.png" class="w-12 h-12" />
         <span class="ml-4 font-semibold">Sugarcane</span>
@@ -304,7 +305,7 @@
   </a>
 
   <a href="http://localhost:5000/commodity/Arhar" class="text-black">
-    <div class="bg-gray-100 p-4 rounded-md shadow-md hover:shadow-lg">
+    <div class="bg-white-100 p-4 rounded-md shadow-md hover:shadow-lg">
       <div class="flex items-center">
         <img src="https://img.icons8.com/color/48/000000/paper-bag-with-seeds.png" class="w-12 h-12" />
         <span class="ml-4 font-semibold">Arhar</span>
@@ -315,7 +316,7 @@
 
 <div class="grid grid-cols-4 gap-4 mt-4">
   <a href="http://localhost:5000/commodity/Ragi" class="text-black">
-    <div class="bg-gray-100 p-4 rounded-md shadow-md hover:shadow-lg">
+    <div class="bg-white-100 p-4 rounded-md shadow-md hover:shadow-lg">
       <div class="flex items-center">
         <img src="https://img.icons8.com/office/48/000000/wheat.png" class="w-12 h-12" />
         <span class="ml-4 font-semibold">Ragi</span>
@@ -324,7 +325,7 @@
   </a>
 
   <a href="http://localhost:5000/commodity/Maize" class="text-black">
-    <div class="bg-gray-100 p-4 rounded-md shadow-md hover:shadow-lg">
+    <div class="bg-white-100 p-4 rounded-md shadow-md hover:shadow-lg">
       <div class="flex items-center">
         <img src="https://img.icons8.com/color/48/000000/corn.png" class="w-12 h-12" />
         <span class="ml-4 font-semibold">Maize</span>
@@ -333,18 +334,18 @@
   </a>
 
   <a href="http://localhost:5000/commodity/Moong" class="text-black">
-    <div class="bg-gray-100 p-4 rounded-md shadow-md hover:shadow-lg">
+    <div class="bg-white-100 p-4 rounded-md shadow-md hover:shadow-lg">
       <div class="flex items-center">
-        <img src="https://img.icons8.com/color/48/000000/paper-bag-with-seeds.png" class="w-12 h-12" />
+        <img src="https://png.pngtree.com/png-vector/20201117/ourlarge/pngtree-nutritious-ingredients-mung-beans-png-image_2437725.jpg" class="w-12 h-12" />
         <span class="ml-4 font-semibold">Moong</span>
       </div>
     </div>
   </a>
 
   <a href="http://localhost:5000/commodity/Masoor" class="text-black">
-    <div class="bg-gray-100 p-4 rounded-md shadow-md hover:shadow-lg">
+    <div class="bg-white-100 p-4 rounded-md shadow-md hover:shadow-lg">
       <div class="flex items-center">
-        <img src="https://img.icons8.com/color/48/000000/paper-bag-with-seeds.png" class="w-12 h-12" />
+        <img src="https://png.pngtree.com/png-clipart/20220705/ourmid/pngtree-chana-dal-or-split-chickpeas-in-a-bowl-png-image_5687328.png" class="w-12 h-12" />
         <span class="ml-4 font-semibold">Masoor</span>
       </div>
     </div>
@@ -353,40 +354,80 @@
 
 <div class="grid grid-cols-4 gap-4 mt-4">
   <a href="http://localhost:5000/commodity/Urad" class="text-black">
-    <div class="bg-gray-100 p-4 rounded-md shadow-md hover:shadow-lg">
+    <div class="bg-white-100 p-4 rounded-md shadow-md hover:shadow-lg">
       <div class="flex items-center">
-        <img src="https://img.icons8.com/color/48/000000/paper-bag-with-seeds.png" class="w-12 h-12" />
+        <img src="https://png.pngtree.com/png-vector/20231222/ourmid/pngtree-on-a-white-background-a-wooden-bowl-holds-urad-dal-black-png-image_11177552.png" class="w-12 h-12" />
         <span class="ml-4 font-semibold">Urad</span>
       </div>
     </div>
   </a>
 
-  <a href="http://localhost:5000/commodity/Ragi" class="text-black">
-    <div class="bg-gray-100 p-4 rounded-md shadow-md hover:shadow-lg">
+  <a href="http://localhost:5000/commodity/Jute" class="text-black">
+    <div class="bg-white-100 p-4 rounded-md shadow-md hover:shadow-lg">
       <div class="flex items-center">
-        <img src="https://img.icons8.com/color/48/000000/paper-bag-with-seeds.png" class="w-12 h-12" />
-        <span class="ml-4 font-semibold">Ragi</span>
+        <img src="https://cdn-icons-png.flaticon.com/512/8665/8665910.png" class="w-12 h-12" />
+        <span class="ml-4 font-semibold">Jute</span>
       </div>
     </div>
   </a>
 
   <a href="http://localhost:5000/commodity/Safflower" class="text-black">
-    <div class="bg-gray-100 p-4 rounded-md shadow-md hover:shadow-lg">
+    <div class="bg-white-100 p-4 rounded-md shadow-md hover:shadow-lg">
       <div class="flex items-center">
-        <img src="https://img.icons8.com/color/48/000000/paper-bag-with-seeds.png" class="w-12 h-12" />
+        <img src="https://png.pngtree.com/png-vector/20231113/ourmid/pngtree-sunflower-seeds-oil-png-image_10447591.png" class="w-12 h-12" />
         <span class="ml-4 font-semibold">Safflower Seed</span>
       </div>
     </div>
   </a>
 
   <a href="http://localhost:5000/commodity/Sunflower" class="text-black">
-    <div class="bg-gray-100 p-4 rounded-md shadow-md hover:shadow-lg">
+    <div class="bg-white-100 p-4 rounded-md shadow-md hover:shadow-lg">
       <div class="flex items-center">
         <img src="https://img.icons8.com/color/48/000000/sunflower.png" class="w-12 h-12" />
         <span class="ml-4 font-semibold">Sunflower Seed</span>
       </div>
     </div>
   </a>
+</div>
+
+    <div class="grid grid-cols-4 gap-4 mt-4">
+  <a href="http://localhost:5000/commodity/Bajra" class="text-black">
+    <div class="bg-white-100 p-4 rounded-md shadow-md hover:shadow-lg">
+      <div class="flex items-center">
+        <img src="https://png.pngtree.com/png-clipart/20240220/original/pngtree-millet-in-wood-spoon-on-white-background-cereal-photo-png-image_14362113.png" class="w-12 h-12" />
+        <span class="ml-4 font-semibold">Bajra</span>
+      </div>
+    </div>
+  </a>
+
+  <a href="http://localhost:5000/commodity/Jowar" class="text-black">
+    <div class="bg-white-100 p-4 rounded-md shadow-md hover:shadow-lg">
+      <div class="flex items-center">
+        <img src="https://png.pngtree.com/png-vector/20231013/ourmid/pngtree-closeup-of-a-white-background-with-a-pile-of-sorghum-jowar-png-image_10256183.png" class="w-12 h-12" />
+        <span class="ml-4 font-semibold">Jowar</span>
+      </div>
+    </div>
+  </a>
+
+  <a href="http://localhost:5000/commodity/Niger" class="text-black">
+    <div class="bg-white-100 p-4 rounded-md shadow-md hover:shadow-lg">
+      <div class="flex items-center">
+        <img src="https://w7.pngwing.com/pngs/169/401/png-transparent-bird-food-seed-niger-vegetarian-cuisine-food-text-food-superfood-bird-food.png" class="w-12 h-12" />
+        <span class="ml-4 font-semibold">Niger</span>
+      </div>
+    </div>
+  </a>
+
+  <!--<a href="http://localhost:5000/commodity/Masoor" class="text-black">
+    <div class="bg-white-100 p-4 rounded-md shadow-md hover:shadow-lg">
+      <div class="flex items-center">
+        <img src="https://img.icons8.com/color/48/000000/paper-bag-with-seeds.png" class="w-12 h-12" />
+        <span class="ml-4 font-semibold">Masoor</span>
+      </div>
+    </div>
+  </a> -->
+    </div>
+
 </div>
     </div>
 <script type="text/javascript" charset="utf-8">
