@@ -211,7 +211,6 @@ def TopFiveWinners():
     return to_send
 
 
-
 def TopFiveLosers():
     current_month = datetime.now().month
     current_year = datetime.now().year
@@ -228,16 +227,25 @@ def TopFiveLosers():
         prev_predict = i.getPredictedValue([float(prev_month), current_year, prev_rainfall])
         prev_month_prediction.append(prev_predict)
         change.append((((current_predict - prev_predict) * 100 / prev_predict), commodity_list.index(i)))
-    sorted_change = change
-    sorted_change.sort()
+
+    sorted_change = sorted(change)  # Ensure sorted_change is a list of tuples in ascending order of percentage change
+
+    # Check if sorted_change has fewer than 5 items
+    if len(sorted_change) < 5:
+        # Pad with None or some default values if fewer than 5 items
+        sorted_change += [(None, idx) for idx in range(len(sorted_change), 5)]
+
     to_send = []
     for j in range(0, 5):
         perc, i = sorted_change[j]
-        name = commodity_list[i].getCropName().split('/')[1]
-        to_send.append([name, round((current_month_prediction[i] * base[name]) / 100, 2), round(perc, 2)])
-   # print(to_send)
-    return to_send
+        if perc is not None:
+            name = commodity_list[i].getCropName().split('/')[1]
+            to_send.append([name, round((current_month_prediction[i] * base[name]) / 100, 2), round(perc, 2)])
+        else:
+            # Handle case where there is not enough data
+            to_send.append(["Unknown", 0.0, 0.0])
 
+    return to_send
 
 
 def SixMonthsForecast():
