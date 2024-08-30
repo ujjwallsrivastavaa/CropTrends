@@ -249,48 +249,60 @@ def TopFiveLosers():
 
 
 def SixMonthsForecast():
-    month1=[]
-    month2=[]
-    month3=[]
-    month4=[]
-    month5=[]
-    month6=[]
+    month1 = []
+    month2 = []
+    month3 = []
+    month4 = []
+    month5 = []
+    month6 = []
+
     for i in commodity_list:
-        crop=SixMonthsForecastHelper(i.getCropName())
-        k=0
+        crop = SixMonthsForecastHelper(i.getCropName())
+        k = 0
         for j in crop:
             time = j[0]
             price = j[1]
             change = j[2]
-            if k==0:
-                month1.append((price,change,i.getCropName().split("/")[1],time))
-            elif k==1:
-                month2.append((price,change,i.getCropName().split("/")[1],time))
-            elif k==2:
-                month3.append((price,change,i.getCropName().split("/")[1],time))
-            elif k==3:
-                month4.append((price,change,i.getCropName().split("/")[1],time))
-            elif k==4:
-                month5.append((price,change,i.getCropName().split("/")[1],time))
-            elif k==5:
-                month6.append((price,change,i.getCropName().split("/")[1],time))
-            k+=1
+            if k == 0:
+                month1.append((price, change, i.getCropName().split("/")[1], time))
+            elif k == 1:
+                month2.append((price, change, i.getCropName().split("/")[1], time))
+            elif k == 2:
+                month3.append((price, change, i.getCropName().split("/")[1], time))
+            elif k == 3:
+                month4.append((price, change, i.getCropName().split("/")[1], time))
+            elif k == 4:
+                month5.append((price, change, i.getCropName().split("/")[1], time))
+            elif k == 5:
+                month6.append((price, change, i.getCropName().split("/")[1], time))
+            k += 1
+
     month1.sort()
     month2.sort()
     month3.sort()
     month4.sort()
     month5.sort()
     month6.sort()
-    crop_month_wise=[]
-    crop_month_wise.append([month1[0][3],month1[len(month1)-1][2],month1[len(month1)-1][0],month1[len(month1)-1][1],month1[0][2],month1[0][0],month1[0][1]])
-    crop_month_wise.append([month2[0][3],month2[len(month2)-1][2],month2[len(month2)-1][0],month2[len(month2)-1][1],month2[0][2],month2[0][0],month2[0][1]])
-    crop_month_wise.append([month3[0][3],month3[len(month3)-1][2],month3[len(month3)-1][0],month3[len(month3)-1][1],month3[0][2],month3[0][0],month3[0][1]])
-    crop_month_wise.append([month4[0][3],month4[len(month4)-1][2],month4[len(month4)-1][0],month4[len(month4)-1][1],month4[0][2],month4[0][0],month4[0][1]])
-    crop_month_wise.append([month5[0][3],month5[len(month5)-1][2],month5[len(month5)-1][0],month5[len(month5)-1][1],month5[0][2],month5[0][0],month5[0][1]])
-    crop_month_wise.append([month6[0][3],month6[len(month6)-1][2],month6[len(month6)-1][0],month6[len(month6)-1][1],month6[0][2],month6[0][0],month6[0][1]])
 
-   # print(crop_month_wise)
+    crop_month_wise = []
+
+    def get_first_last_elements(lst):
+        if len(lst) > 0:
+            first = lst[0]
+            last = lst[-1]
+            return [first[3], last[2], last[0], last[1], first[2], first[0], first[1]]
+        else:
+            return [None] * 7
+
+    crop_month_wise.append(get_first_last_elements(month1))
+    crop_month_wise.append(get_first_last_elements(month2))
+    crop_month_wise.append(get_first_last_elements(month3))
+    crop_month_wise.append(get_first_last_elements(month4))
+    crop_month_wise.append(get_first_last_elements(month5))
+    crop_month_wise.append(get_first_last_elements(month6))
+
     return crop_month_wise
+
 
 def SixMonthsForecastHelper(name):
     current_month = datetime.now().month
