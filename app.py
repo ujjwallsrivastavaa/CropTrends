@@ -2,6 +2,7 @@
 
 from flask import Flask, render_template
 from flask_cors import CORS, cross_origin
+from flask_ngrok import run_with_ngrok
 import numpy as np
 import pandas as pd
 from datetime import datetime
@@ -471,7 +472,5 @@ if __name__ == "__main__":
     commodity_list.append(wheat)
 
     app.run()
-
-
 
 
